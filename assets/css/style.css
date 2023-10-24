@@ -1,0 +1,316 @@
+/* Resest CSS */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CSS dung chung */
+
+.text-center {
+    /* căn giữa cho nội dung */
+    text-align: center;
+}
+
+.font-a {
+    /* thẻ a thì bỏ gạch chân */
+    text-decoration: none;
+}
+
+/* css margin */
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+/* dòng  */
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* cột */
+.col {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/* chia làm 2 cột */
+.col-half {
+    width: 50%;
+}
+/* chia làm 3 cột */
+.col-third {
+    width: calc(100% / 3);
+}
+/* chia làm 1 cột full kích cỡ */
+.col-full {
+    width: 100%;
+}
+
+/*                                        main                     */
+#main {
+    
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: red;
+}
+
+#nav .subnav {
+    list-style-type: none;
+}
+
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 50px;
+    padding: 0 25px;
+    display: block;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav li:hover > a,
+#nav .subnav li:hover a {
+    color:#000;
+    background-color: yellow;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    min-width: 160px;
+}
+
+#nav .subnav a {
+    color:black;
+    padding: 0 16px;
+    line-height: 40px;
+}
+
+/* nút tìm kiếm */
+
+#nav {
+    display: inline-block;
+}
+
+#header .search-button {
+    float: right;
+    padding: 0 21px;
+    cursor: pointer;
+}
+
+#header .search-button:hover {
+    background-color: #ccc;
+}
+
+#header .search-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+/*                                      lớp giả                */
+:root {
+    --value-index: violet;
+    --color-h: red;
+    --color-ul: orange;
+    --color-icon: burlywood;
+    --color-player: cadetblue;
+}
+
+/*                         phan noi dung trang web                          */
+
+#content .title-main h1 , h2 {
+    color: red;
+    /* margin-top: 50px;
+    margin-bottom: 20px; */
+}
+
+#content .title-main {
+    margin-top: 80px;
+}
+
+#content .title-sub-main {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding: 64px 0 112px; */
+}
+
+
+
+/* ảnh giáo sư */
+#content .img-ase {
+    display: block;
+    margin: 20px auto;
+    width: 50%;
+}
+
+#content .content-ase {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .content-ase-child {
+    text-align: justify;
+}
+
+/* danh sách cầu thủ */
+
+/* thẻ a: Den trang chu cua phao thu ngay*/
+.font-ar {
+    text-decoration: none;
+    padding: 5px;
+    color: crimson; 
+
+}
+
+.font-a {
+    list-style-type: none;
+}
+
+/* Icon */
+#content .title-icon {
+    color: var(--color-icon);
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.icon-content, .icon-img {
+    flex: 1;
+    margin: 10px;
+}
+
+.icon-content ul {
+    padding: 0; /* Loại bỏ khoảng cách mặc định của ul */
+    list-style: none; /* Loại bỏ các điểm li */
+    
+}
+
+.icon-img img {
+    max-width: 100%;
+}
+
+/* .title-icon-img {
+    margin: 50px;
+}
+
+.icon-ul {
+
+}
+
+.icon-img {
+    width: 100%;
+} */
+
+
+/* Player */
+
+.title-player {
+    color: var(--color-player);
+    /* margin-left: 50px; */
+    margin-bottom: 50px;
+}
+
+.player-img {
+    width: 100%;
+}
+ 
+.title-player-img {
+    margin: 50px;
+}
+
+
+
+.title-stars {
+    color: var(--value-index);   
+}
+
+/* Ozil */
+#content .content-ozil {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #000;
+}
+
+/* Xhaka */
+div .title-stars-child {
+    border: 0.5rem outset pink;
+    outline: 0.5rem solid khaki;
+    box-shadow: 0 0 0 2rem skyblue;
+    border-radius: 12px;
+    font: bold 1rem sans-serif;
+    margin: 2rem;
+    padding: 1rem;
+    outline-offset: 0.5rem;
+    margin-bottom: 40px;
+}
+
+.title-stars-child > p {
+    text-align: center;
+    color: #000;
+    width: 100%;
+}
+
+/*                                    Chân trang web                        */
+
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .socials-list {
+    font-size: 50px;
+}
+
+#footer .socials-list a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .socials-list a:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
